@@ -3,32 +3,7 @@
 #pragma once
 
 #if defined(ESP32)
-  // ESP32-C3 (e.g. XIAO ESP32-C3): valid GPIO = 2..10, 20, 21
-  // GPIO6=SDA, GPIO7=SCL (I2C display), GPIO20/21=USB — avoid these for buttons
-  // Override any of these in Config.h with e.g. #define B_PIN1 3
-  #ifdef CONFIG_IDF_TARGET_ESP32C3
-    #ifndef B_PIN0
-    #define B_PIN0            D10  // Shift
-    #endif
-    #ifndef B_PIN1
-    #define B_PIN1             D1  // N
-    #endif
-    #ifndef B_PIN2
-    #define B_PIN2             D2  // S
-    #endif
-    #ifndef B_PIN3
-    #define B_PIN3             D0  // E
-    #endif
-    #ifndef B_PIN4
-    #define B_PIN4             D3  // W
-    #endif
-    #ifndef B_PIN5
-    #define B_PIN5             D8  // F
-    #endif
-    #ifndef B_PIN6
-    #define B_PIN6             D7  // f
-    #endif
-  #elif KEYPAD_JOYSTICK_ANALOG == JS1
+  #if KEYPAD_JOYSTICK_ANALOG == JS1
     #ifndef B_PIN0
     #define B_PIN0             25  // Shift
     #endif
@@ -52,25 +27,25 @@
     #endif
   #else
     #ifndef B_PIN0
-    #define B_PIN0             33  // Shift
+    #define B_PIN0            D10  // Shift
     #endif
     #ifndef B_PIN1
-    #define B_PIN1             25  // N
+    #define B_PIN1             D1  // N
     #endif
     #ifndef B_PIN2
-    #define B_PIN2             32  // S
+    #define B_PIN2             D2  // S
     #endif
     #ifndef B_PIN3
-    #define B_PIN3             36  // E
+    #define B_PIN3             D0  // E
     #endif
     #ifndef B_PIN4
-    #define B_PIN4             34  // W
+    #define B_PIN4             D3  // W
     #endif
     #ifndef B_PIN5
-    #define B_PIN5             39  // F
+    #define B_PIN5             D8  // F
     #endif
     #ifndef B_PIN6
-    #define B_PIN6             35  // f
+    #define B_PIN6             D7  // f
     #endif
   #endif
 
