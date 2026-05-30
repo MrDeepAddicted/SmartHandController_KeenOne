@@ -27,25 +27,25 @@
     #endif
   #else
     #ifndef B_PIN0
-    #define B_PIN0             33  // Shift
+    #define B_PIN0            D10  // Shift
     #endif
     #ifndef B_PIN1
-    #define B_PIN1             25  // N
+    #define B_PIN1             D1  // N
     #endif
     #ifndef B_PIN2
-    #define B_PIN2             32  // S
+    #define B_PIN2             D2  // S
     #endif
     #ifndef B_PIN3
-    #define B_PIN3             36  // E
+    #define B_PIN3             D0  // E
     #endif
     #ifndef B_PIN4
-    #define B_PIN4             34  // W
+    #define B_PIN4             D3  // W
     #endif
     #ifndef B_PIN5
-    #define B_PIN5             39  // F
+    #define B_PIN5             D8  // F
     #endif
     #ifndef B_PIN6
-    #define B_PIN6             35  // f
+    #define B_PIN6             D7  // f
     #endif
   #endif
 
